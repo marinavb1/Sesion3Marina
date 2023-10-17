@@ -54,6 +54,8 @@ class CuentaTest {
 		assertEquals(3000, ctaPruebas.getSaldo());
 	}
 
+	
+	//Test caso practica
 	@Test
 	void test() {
 
