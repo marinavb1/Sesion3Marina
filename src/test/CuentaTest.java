@@ -14,7 +14,7 @@ class CuentaTest {
 	static Cuenta ctaPruebas;
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		ctaPruebas=new Cuenta(0);
+		ctaPruebas = new Cuenta(3000, "Pepito", "1000232");
 	}
 
 	@AfterAll
@@ -40,6 +40,13 @@ class CuentaTest {
 		ctaPruebas.retirar(3000);
 		assertEquals(0, ctaPruebas.getSaldo());
 	}
+	
+	@Test
+	void testRetirarMenos500() {
+		ctaPruebas.retirar(3600);
+		assertEquals(3000, ctaPruebas.getSaldo());
+	}
+	
 	
 
 }
