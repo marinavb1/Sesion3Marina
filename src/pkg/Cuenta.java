@@ -22,7 +22,7 @@ public class Cuenta {
 		setSaldo(this.saldo+cantidad);
 		Movimiento mov = new Movimiento(cantidad, "Ingreso realizado" , Movimiento.signo.H);
 		mMovimientos.add(mov);
-		System.out.println("Ingreso realizado. Saldo: " + getSaldo());
+		
 	}
 
 
@@ -31,11 +31,11 @@ public class Cuenta {
 		if((getSaldo()-cantidad)>=-500) {
 			setSaldo(this.saldo-cantidad);
 			mov = new Movimiento(cantidad, "Dinero retirado" , Movimiento.signo.D);
-			System.out.println("Dinero retirado. Saldo: " + getSaldo());
+			
 			
 		}else {
-			mov = new Movimiento(cantidad, "No se ha podido retirar el dinero. Descubierto maximo: 500 euros" , Movimiento.signo.D);
-			System.out.println("No se ha podido retirar el dinero. Saldo: " + getSaldo());
+			mov = new Movimiento(cantidad, "Fondos insuficientes. No se ha podido retirar el dinero." , Movimiento.signo.D);
+			
 			
 		}
 		mMovimientos.add(mov);
@@ -50,4 +50,11 @@ public class Cuenta {
 		this.saldo=saldo;
 	}
 
+	public void verMovimiento() {
+		int i=0;
+		while(i<mMovimientos.size()) {
+			System.out.println("tipo: "+ mMovimientos.get(i).getTipo() + " importe " + mMovimientos.get(i).getImporte() + " mensaje: " + mMovimientos.get(i).getDetalle());
+			i++;
+		}
+	}
 }

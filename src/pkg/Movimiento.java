@@ -15,4 +15,30 @@ public class Movimiento {
 		this.detalle = detalle;
 		this.tipo = tipo;
 	}
+
+	public double getImporte() {
+		return importe;
+	}
+
+	public void setImporte(double importe) {
+		this.importe = importe;
+	}
+
+	public String getDetalle() {
+		return detalle;
+	}
+
+	public void setDetalle(String detalle) {
+		this.detalle = detalle;
+	}
+
+	public signo getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(signo tipo) {
+		this.tipo = tipo;
+	}
+	
+	
 }
