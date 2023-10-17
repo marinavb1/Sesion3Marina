@@ -23,6 +23,7 @@ class CuentaTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
+		ctaPruebas.setSaldo(3000); //cada prueba comienza con el saldo a 3000
 	}
 
 	@AfterEach
@@ -33,6 +34,11 @@ class CuentaTest {
 	void testIngresar() {
 		ctaPruebas.ingresar(3000);
 		assertEquals(3000, ctaPruebas.getSaldo());
+	}
+	@Test
+	void TestRetirar(){
+		ctaPruebas.retirar(3000);
+		assertEquals(0, ctaPruebas.getSaldo());
 	}
 	
 
