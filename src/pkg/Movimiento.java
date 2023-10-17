@@ -6,9 +6,13 @@ public class Movimiento {
 
 	private double importe;
 	String detalle;
-	public enum signo{D,H};
+
+	public enum signo {
+		D, H
+	};
+
 	private signo tipo;
-	
+
 	public Movimiento(double importe, String detalle, signo tipo) {
 		super();
 		this.importe = importe;
@@ -39,6 +43,5 @@ public class Movimiento {
 	public void setTipo(signo tipo) {
 		this.tipo = tipo;
 	}
-	
-	
+
 }
