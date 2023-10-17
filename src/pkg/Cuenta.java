@@ -15,16 +15,15 @@ public class Cuenta {
 
 	public double getSaldo() {
 		
-		return 0;
+		return saldo;
 	}
 	
 	public void setSaldo(double saldo) {
 		this.saldo=saldo;
 	}
 
-	public void retirar(int i) {
-		// TODO Auto-generated method stub
-		
+	public void retirar(int cantidad) {
+		setSaldo(getSaldo()-cantidad);
 	}
 
 }
