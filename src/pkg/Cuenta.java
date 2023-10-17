@@ -9,14 +9,13 @@ public class Cuenta {
 		this.saldo=saldo;
 	}
 
-	public void ingresar(int i) {
-		
-		
+	public void ingresar(int cantidad) {
+		setSaldo(this.saldo+cantidad);
 	}
 
 	public double getSaldo() {
 		
-		return 3000;
+		return saldo;
 	}
 	
 	public void setSaldo(double saldo) {
